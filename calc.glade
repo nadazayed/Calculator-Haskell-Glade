@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glade-interface>
+  <widget class="GtkWindow" id="window1">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">CALCULATOR</property>
+    <property name="window_position">center</property>
+    
+    <child><!--vbox1-->
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+
+        <child><!--lbl1-->
+          <widget class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Calculator</property>
+          </widget>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child><!--lbl1-->
+
+        <child><!--tbl1-->
+          <widget class="GtkTable" id="table1"><!--tbl1-->
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="n_rows">4</property>
+            <property name="n_columns">3</property>
+<!--tbl1 contents-->
+            <child><!--num1-->
+              <widget class="GtkEntry" id="entry1">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="invisible_char">•</property>
+                <property name="primary_icon_activatable">False</property>
+                <property name="secondary_icon_activatable">False</property>
+                <property name="primary_icon_sensitive">True</property>
+                <property name="secondary_icon_sensitive">True</property>
+              </widget>
+              <packing>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing>
+            </child><!--num1-->
+
+            <child><!--num2-->
+              <widget class="GtkEntry" id="entry2">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="invisible_char">•</property>
+                <property name="primary_icon_activatable">False</property>
+                <property name="secondary_icon_activatable">False</property>
+                <property name="primary_icon_sensitive">True</property>
+                <property name="secondary_icon_sensitive">True</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing><!--num2-->
+            </child>
+
+            <child><!--result-->
+              <widget class="GtkEntry" id="entry3">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="invisible_char">•</property>
+                <property name="primary_icon_activatable">False</property>
+                <property name="secondary_icon_activatable">False</property>
+                <property name="primary_icon_sensitive">True</property>
+                <property name="secondary_icon_sensitive">True</property>
+                <property name="editable">False</property>
+              </widget>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="right_attach">4</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing>
+            </child><!--result-->
+
+            <child><!--sum-->
+              <widget class="GtkButton" id="button1">
+                <property name="label" translatable="yes">+</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+              </packing>
+            </child><!--sum-->
+
+            <child><!--diff-->
+              <widget class="GtkButton" id="button2">
+                <property name="label" translatable="yes">-</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="right_attach">4</property>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+              </packing>
+            </child><!--diff-->
+
+            <child><!--div-->
+              <widget class="GtkButton" id="button3">
+                <property name="label" translatable="yes">/</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+              </packing>
+            </child><!--div-->
+
+            <child><!--mult-->
+              <widget class="GtkButton" id="button4">
+                <property name="label" translatable="yes">*</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="top_attach">4</property>
+                <property name="bottom_attach">5</property>
+              </packing>
+            </child><!--mult-->
+
+
+            <child><!--pow-->
+              <widget class="GtkButton" id="button5">
+                <property name="label" translatable="yes">^</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">4</property>
+                <property name="bottom_attach">5</property>
+              </packing>
+            </child><!--pow-->
+
+            <child><!--mod-->
+              <widget class="GtkButton" id="button6">
+                <property name="label" translatable="yes">%</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="right_attach">4</property>
+                <property name="top_attach">4</property>
+                <property name="bottom_attach">5</property>
+              </packing>
+            </child><!--mod-->
+
+<!--tbl1 contents-->
+          </widget>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child><!--tbl1-->
+
+       <child><!--hbox1-->
+         <widget class="GtkHBox" id="hbox1">
+           <property name="visible">True</property>
+           <property name="can_focus">False</property>
+
+           <child><!--sin-->
+              <widget class="GtkButton" id="button7">
+                <property name="label" translatable="yes">Sin</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+           </child><!--sin-->
+
+           <child><!--cos-->
+              <widget class="GtkButton" id="button8">
+                <property name="label" translatable="yes">Cos</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+           </child><!--cos-->
+
+           <child><!--tan-->
+              <widget class="GtkButton" id="button9">
+                <property name="label" translatable="yes">Tan</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+           </child><!--tan-->
+
+         </widget>
+      </child><!--hbox1-->
+
+       <child><!--hbox2-->
+         <widget class="GtkHBox" id="hbox2">
+           <property name="visible">True</property>
+           <property name="can_focus">False</property>
+
+           <child><!--abs-->
+              <widget class="GtkButton" id="button10">
+                <property name="label" translatable="yes">Sinh</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+           </child><!--abs-->
+
+           <child><!--log-->
+              <widget class="GtkButton" id="button11">
+                <property name="label" translatable="yes">Cosh</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+           </child><!--log-->
+
+           <child><!--close-->
+              <widget class="GtkButton" id="button12">
+                <property name="label" translatable="yes">Tanh</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+           </child><!--close-->
+
+         </widget>
+      </child><!--hbox2-->
+
+       <child><!--hbox3-->
+         <widget class="GtkHBox" id="hbox3">
+           <property name="visible">True</property>
+           <property name="can_focus">False</property>
+
+           <child><!--ceil-->
+              <widget class="GtkButton" id="button13">
+                <property name="label" translatable="yes">ceil</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+           </child><!--ceil-->
+
+           <child><!--floor-->
+              <widget class="GtkButton" id="button14">
+                <property name="label" translatable="yes">floor</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+           </child><!--floor-->
+
+           <child><!--abs-->
+              <widget class="GtkButton" id="button15">
+                <property name="label" translatable="yes">abs</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+           </child><!--abs-->
+
+         </widget>
+      </child><!--hbox3-->
+
+
+       <child><!--hbox3-->
+         <widget class="GtkHBox" id="hbox4">
+           <property name="visible">True</property>
+           <property name="can_focus">False</property>
+
+           <child><!--log-->
+              <widget class="GtkButton" id="button16">
+                <property name="label" translatable="yes">log</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+           </child><!--log-->
+
+           <child><!--exp-->
+              <widget class="GtkButton" id="button17">
+                <property name="label" translatable="yes">exp</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+           </child><!--exp-->
+
+           <child><!--close-->
+              <widget class="GtkButton" id="button18">
+                <property name="label" translatable="yes">Close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </widget>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+           </child><!--close-->
+
+         </widget>
+      </child><!--hbox4-->
+
+      </widget> <!--vbox1-->
+    </child><!--vbox1-->
+
+  </widget> <!--window1-->
+</glade-interface>
